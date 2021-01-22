@@ -1,4 +1,6 @@
-//  Problem1
+//  https://github.com/programmer-shaheb/problem-solving-assignment
+
+//  Problem1 (Kilometer To Meter)
 
 function kilometerToMeter(distance) {
   if (distance < 0) {
@@ -8,17 +10,7 @@ function kilometerToMeter(distance) {
   }
 }
 
-// Problem2
-
-var friendsList = [
-  "Akash",
-  "Pankaj",
-  "Faruque Parvej45454545454",
-  "xxxydfyc",
-  "Abidur Rahman Akash",
-  10,
-  "Rasel",
-];
+// Problem2 (Find The Big String From An Array)
 
 function megaFriend(arr) {
   var longestString = arr[0];
@@ -30,10 +22,13 @@ function megaFriend(arr) {
   return longestString;
 }
 
-// Problem3
+// Problem3 (Create A Budget Calculator)
 
 function budgetCalculator(watchCount, phoneCount, laptopCount) {
   let totalMoney = 0;
+  if (watchCount < 0 || phoneCount < 0 || laptopCount < 0) {
+    return "Invalid Number!";
+  }
   if (watchCount >= 0) {
     var moneyForWatch = watchCount * 50;
   }
@@ -47,15 +42,12 @@ function budgetCalculator(watchCount, phoneCount, laptopCount) {
   return totalMoney;
 }
 
-// var value = budgetCalculator(20, 4560, 10);
-// console.log(value);
-
-// Problem4
+// Problem4 (Find The Costing For Staying In A Hotel)
 
 function hotelCost(days) {
   var cost = 0;
   if (days < 0 || !Number.isInteger(days)) {
-    return "Please Input A Valid Number";
+    return "Please Input A Valid Number.";
   } else if (days <= 10) {
     var first10Days = days * 100;
     cost = first10Days;
@@ -73,6 +65,3 @@ function hotelCost(days) {
   }
   return cost;
 }
-
-var res = hotelCost(1);
-console.log(res);
